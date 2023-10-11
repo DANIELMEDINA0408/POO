@@ -1,13 +1,17 @@
 package Empleados;
-
-public class EmpleadoPorHoras extends Empleados{
+class EmpleadoPorHoras extends Empleado {
     private int horasTrabajadas;
     private double tarifaPorHora;
 
-    public EmpleadoPorHoras(int horasTrabajadas, double tarifaPorHora, String nombre, double salarioBase) {
+    public EmpleadoPorHoras(String nombre, double salarioBase, int horasTrabajadas, double tarifaPorHora) {
         super(nombre, salarioBase);
         this.horasTrabajadas = horasTrabajadas;
         this.tarifaPorHora = tarifaPorHora;
+    }
+
+    @Override
+    public double calcularSalario() {
+        return horasTrabajadas * tarifaPorHora;
     }
 
     public int getHorasTrabajadas() {
@@ -25,29 +29,4 @@ public class EmpleadoPorHoras extends Empleados{
     public void setTarifaPorHora(double tarifaPorHora) {
         this.tarifaPorHora = tarifaPorHora;
     }
-
-    @Override
-    public String getNombre() {
-        return nombre;
-    }
-
-    @Override
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    @Override
-    public double getSalarioBase() {
-        return salarioBase;
-    }
-
-    @Override
-    public void setSalarioBase(double salarioBase) {
-        this.salarioBase = salarioBase;
-    }
-    
-        public double calcularSalario(){
-        return  (this.tarifaPorHora*this.horasTrabajadas)+this.salarioBase;
-    }
-    
 }
