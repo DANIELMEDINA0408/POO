@@ -17,13 +17,13 @@ public class Main {
 
         Automovil auto1 = new Automovil(4, "Chevrolet", "4", "TFG456", 5);
         coches.add(auto1);
-        
+
         Automovil auto2 = new Automovil(2, "Renault", "2", "DFV347", 4);
         coches.add(auto2);
 
         Motocicleta moto1 = new Motocicleta(600, "Suzuki", "3", "45GFKT", 2);
         motocicletas.add(moto1);
-        
+
         Motocicleta moto2 = new Motocicleta(400, "AKT", "1", "DFV895", 3);
         motocicletas.add(moto2);
 
@@ -125,7 +125,7 @@ public class Main {
             }
             return gson.toJson(ganancias);
         });
-        
+
         get("/gananciasAutos", (req, res) -> {
             res.type("application/json");
             int total = 0;
@@ -135,7 +135,7 @@ public class Main {
             }
             return gson.toJson(total);
         });
-        
+
         get("/gananciasMotos", (req, res) -> {
             res.type("application/json");
             int total = 0;
@@ -160,7 +160,7 @@ public class Main {
             }
             return gson.toJson(totalAutos + totalMotos);
           });
-        
+
     }
     public static int getCurrentHour() {
         LocalTime now = LocalTime.now();

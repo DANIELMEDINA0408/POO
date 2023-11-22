@@ -1,4 +1,3 @@
-
 package adme.parqueadero;
 /**
  *
@@ -9,12 +8,12 @@ public class Automovil extends Vehiculo{
     // Constructores, getters y setters
 
     // Otros métodos específicos para automóviles
-    
+
     public Automovil(int numeroPuertas, String marca, String modelo, String placa, int horaEntrada) {
         super(marca, modelo, placa, horaEntrada);
         this.numeroPuertas = numeroPuertas;
     }
-    
+
     public int getNumeroPuertas() {
         return numeroPuertas;
     }
@@ -22,6 +21,6 @@ public class Automovil extends Vehiculo{
     public void setNumeroPuertas(int numeroPuertas) {
         this.numeroPuertas = numeroPuertas;
     }
-    
-  
+
+
 }
