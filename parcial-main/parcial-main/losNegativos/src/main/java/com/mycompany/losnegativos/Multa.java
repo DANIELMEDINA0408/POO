@@ -12,12 +12,7 @@ public class Multa {
         this.prestamo = prestamo;
     }
 
-    public Multa() {
-        this.diasRetraso = 0;
-        this.montoMulta = 0;
-        this.lector = null;
-        this.prestamo = null;
-    }
+ 
     public Lector getLector() {
         return lector;
     }

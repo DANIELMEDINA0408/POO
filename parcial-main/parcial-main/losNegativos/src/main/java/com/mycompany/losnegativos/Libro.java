@@ -1,13 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.losnegativos;
 import java.util.List;
-/**
- *
- * @author IngSis
- */
+
 public class Libro {
     
     public String nombre;
@@ -25,14 +19,30 @@ public class Libro {
         this.escrito = escrito;
         this.copias = copias;
     }
-    
+ 
 
-    @Override
-    public String toString() {
-        return "Libro{" + "nombre=" + nombre + ", editorial=" + editorial + ", tipo=" + tipo + ", a\u00f1o=" + año + ", escrito=" + escrito + ", copias=" + copias + '}';
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-  
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
 
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setAño(String año) {
+        this.año = año;
+    }
+
+    public void setEscrito(List<Autor> escrito) {
+        this.escrito = escrito;
+    }
+
+    public void setCopias(List<Copia> copias) {
+        this.copias = copias;
+    }
     
 }

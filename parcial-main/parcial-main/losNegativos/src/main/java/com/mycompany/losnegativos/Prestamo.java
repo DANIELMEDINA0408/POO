@@ -21,13 +21,16 @@ public class Prestamo {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
     }
-      public void generarMulta() {
-        Date hoy = new Date();
-        if (hoy.after(this.fechaFin)) {
-            this.multa = new Multa();
-            System.out.println("Se ha generado una multa por retraso en la devolución del libro.");
-        }    
+public void generarMulta() {
+    Date hoy = new Date();
+    if (this.fechaFin != null && hoy.after(this.fechaFin)) {
+        this.multa = new Multa(0, 0.0, null, null); // asegúrate de que Multa tiene un constructor que acepta estos parámetros
+        System.out.println("Se ha generado una multa por retraso en la devolución del libro.");
+    } else if (this.fechaFin == null) {
+        System.out.println("Error: fechaFin es null");
+    }
 }
+
        public Date calcularFechaFin() {
         Calendar c = Calendar.getInstance();
         c.setTime(this.fechaInicio);
